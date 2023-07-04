@@ -25,12 +25,16 @@
 }
 
 @layer components {
-  html > body {
+  html body {
     @apply bg-emerald-950 cursor-default select-none min-h-screen;
   }
 
   .btnn {
-    @apply flex flex-row gap-4 w-fit items-center justify-center px-8 py-4 bg-emerald-800 hover:bg-emerald-700 dark:bg-lime-300  dark:hover:bg-lime-400 rounded-lg text-white dark:text-emerald-900 mx-auto font-semibold ;
+    @apply flex flex-row gap-4 w-fit items-center justify-center px-8 py-4 bg-emerald-800 hover:bg-emerald-700 dark:bg-lime-300 dark:hover:bg-lime-400 rounded-lg text-white dark:text-emerald-900 mx-auto font-semibold ;
+  }
+
+  .smallCurrency {
+    @apply text-sm text-gray-500 dark:text-gray-300;
   }
 }
 
@@ -46,6 +50,3 @@
   opacity: 1;
 }
 
-.smallCurrency {
-  @apply text-sm text-gray-500 dark:text-gray-300;
-}

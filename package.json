@@ -35,8 +35,5 @@
     "overrides": {
       "glob-parent@<5.1.2": ">=5.1.2"
     }
-  },
-  "dependencies": {
-    "flowbite": "^1.7.0"
   }
 }
