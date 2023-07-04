@@ -43,10 +43,5 @@
   outline: none !important;
   box-shadow: none;
 }
-.carousel img {
-  z-index: 1;
-}
-.carousel img:nth-child(1) {
-  opacity: 1;
-}
+
 
