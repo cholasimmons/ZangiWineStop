@@ -1,0 +1,42 @@
+{
+  "name": "zangi",
+  "version": "0.8.0",
+  "description": "Online wine shop",
+  "main": "main.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch",
+    "dev": "live-server --open=./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cholasimmons/ZangiWineStop.git"
+  },
+  "keywords": [
+    "ken",
+    "simmons",
+    "zangi",
+    "wine",
+    "alcohol",
+    "cholasimmons",
+    "lusaka"
+  ],
+  "author": "justchola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cholasimmons/ZangiWineStop/issues"
+  },
+  "homepage": "https://github.com/cholasimmons/ZangiWineStop#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.3.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "glob-parent@<5.1.2": ">=5.1.2"
+    }
+  },
+  "dependencies": {
+    "flowbite": "^1.7.0"
+  }
+}

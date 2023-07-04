@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'KoHo';
+  src: url('/dist/assets/fonts/KoHo/KoHo-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'KoHo';
+  src: url('/dist/assets/fonts/KoHo/KoHo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'KoHo';
+  src: url('/dist/assets/fonts/KoHo/KoHo-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer components {
+  html > body {
+    @apply bg-emerald-950 cursor-default select-none min-h-screen;
+  }
+
+  .btnn {
+    @apply flex flex-row gap-4 w-fit items-center justify-center px-8 py-4 bg-emerald-800 hover:bg-emerald-700 dark:bg-lime-300  dark:hover:bg-lime-400 rounded-lg text-white dark:text-emerald-900 mx-auto font-semibold ;
+  }
+}
+
+
+*:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.carousel img {
+  z-index: 1;
+}
+.carousel img:nth-child(1) {
+  opacity: 1;
+}
+
+.smallCurrency {
+  @apply text-sm text-gray-500 dark:text-gray-300;
+}

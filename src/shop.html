@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop | Zangi Wine Stop</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <link href="../public/css/output.css" rel="stylesheet">
+  <base href="/src/">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Preload -->
+  <link rel="preload" href="assets/images/logo4.webp" as="image">
+  <link rel="preload" href="assets/images/logo4-dark.webp" as="image">
+
+</head>
+
+<body>
+  <div id="theme" class="dark:bg-sky-950 bg-slate-300" style="background-image: url('/src/assets/images/wine-bg2.webp');">
+
+  <!-- Sidebar Overlay & Sidebar -->
+  <div class="hidden fixed inset-0 bg-black bg-opacity-40  transition-opacity duration-500 z-40" id="sidebarOverlay"></div>
+  <aside class="fixed inset-0 z-50 w-1/2 py-12 bg-sky-950 transition duration-500 ease-out transform -translate-x-full" id="sidebar">
+    <div class="flex items-center justify-center w-full">
+      <img class="zangi-logo h-10" src="assets/images/logo4-dark.webp" alt="Logo">
+    </div>
+
+    <nav class="mt-12 text-white text-xl font-normal flex flex-col">
+      <a href="index.html" class="px-7 py-6 hover:bg-slate-600 transition duration-150 ease-in-out">Home</a>
+      <a href="shop.html" class="px-7 py-6 hover:bg-slate-600 transition duration-150 ease-in-out">Shop</a>
+      <a href="about.html#contact" class="px-7 py-6 hover:bg-slate-600 transition duration-150 ease-in-out">Contact Us</a>
+      <a href="about.html" class="px-7 py-6 hover:bg-slate-600 transition duration-150 ease-in-out">About Zangi</a>
+    </nav>
+  </aside>
+
+
+  <!-- Header -->
+  <header class="fixed w-full bg-slate-100 dark:bg-blue-950 top-0  z-10">
+        <nav class="container mx-auto px-4 md:px-6 lg:px-8">
+          <div class="flex justify-between py-4">
+            <div class="flex-shrink-0 flex items-center">
+              <a href="#">
+                <img id="zangi-logo-1" class="zangi-logo h-10 w-auto ml-4" src="assets/images/logo4.webp" alt="Zangi">
+              </a>
+            </div>
+
+            <div class="flex flex-shrink-0 dark:text-gray-300 text-sky-950">
+              <button id="dark-mode-toggle" title="Dark Mode" class="ml-3 inline-flex items-center justify-center p-1 rounded-md  transition duration-150 ease-in-out toggle-button">
+                <svg id="moon-icon" class="w-12 h-12 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+                  <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
+                  <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke:#f2f2f2;stroke-width:4px"/>
+                  <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
+                  <path d="M78.654 37.576v-8.067h16.308v8.067" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
+                  <g><path d="M71.369 45.28h4.107M78.286 45.28h4.107M85.203 45.28h4.107M92.12 45.28h4.107M99.037 45.28h4.108M71.369 66.452h31.776M71.369 74.071h31.776M71.369 81.655h31.776M71.369 89.24h31.776M71.369 96.824h31.776M71.369 104.408h31.776M71.369 111.992h31.776M71.369 119.576h31.776" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/></g>
+                  <g><path d="M60.713 43.517a14.09 14.09 0 0 1-10.481 4.66c-7.796 0-11.305-4.459-12.845-7.036 12.311 0 18.408-11.308 12.845-21.214 6.541 0 12.05 4.456 13.653 10.496h-1.016a4.93 4.93 0 0 0-4.466 7.021l2.31 4.937v1.136zM19.457 6.411l3.032 8.192 8.192 3.031-8.192 3.031-3.032 8.192-3.031-8.192-8.192-3.031 8.192-3.031 3.031-8.192zM29.322 56.886l2.297 6.207 6.207 2.297-6.207 2.297-2.297 6.207-2.297-6.207-6.207-2.297 6.207-2.297 2.297-6.207zM103.966 6.411l2.297 6.207 6.207 2.297-6.207 2.296-2.297 6.208-2.297-6.208-6.207-2.296 6.207-2.297 2.297-6.207z" style="fill:#f2f2f2"/></g>
+                </svg>
+                <svg id="sun-icon" class="w-12 h-12 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+                  <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
+                  <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke:#0b3c5d;stroke-width:4px"/>
+                  <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke:#0b3c5d;stroke-width:4px;stroke-linecap:butt"/>
+                  <path d="M78.654 37.576v-8.067h16.308v8.067" style="fill:none;stroke:#0b3c5d;stroke-width:4px;stroke-linecap:butt"/>
+                  <g><path d="M71.369 45.28h4.107M78.286 45.28h4.107M85.203 45.28h4.107M92.12 45.28h4.107M99.037 45.28h4.108M71.369 66.452h31.776M71.369 74.071h31.776M71.369 81.655h31.776M71.369 89.24h31.776M71.369 96.824h31.776M71.369 104.408h31.776M71.369 111.992h31.776M71.369 119.576h31.776" style="fill:none;stroke:#0b3c5d;stroke-width:4px;stroke-linecap:butt"/></g>
+                  <g><path d="M49.736 46.531c-6.887 0-12.479-5.591-12.479-12.479 0-6.888 5.592-12.479 12.479-12.479 6.888 0 9.987 3.94 11.348 6.216" style="fill:none;stroke:#0b3c5d;stroke-width:3.76px"/>
+                  <path d="M49.736 2.898v10.111M65.313 7.072l-5.055 8.756M76.717 18.475 67.96 23.53M49.736 65.206V55.095M34.159 61.032l5.056-8.756M22.756 49.629l8.756-5.055M18.852 34.052h10.111M22.99 18.61l8.756 5.056M34.294 7.306l5.056 8.756" style="fill:none;stroke:#0b3c5d;stroke-width:4.14px"/></g>
+                </svg>
+              </button>
+              <div class="hidden md:ml-6 md:flex md:items-center dark:text-gray-300 text-sky-950">
+                <a href="index.html" class="px-4 py-2 rounded-md text-lg font-medium  hover:text-gray-500 focus:text-gray-500 transition duration-150 ease-in-out">Home</a>
+                <a href="shop.html" class="px-4 py-2 mr-3 rounded-md text-lg font-medium  hover:text-gray-500 focus:text-gray-500 transition duration-150 ease-in-out">Shop</a>
+
+                <div class="flex border-l-2 -mr-2 border-gray-600 px-6 py-2 font-medium text-lg  hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-sky-900 cursor-pointer align-middle">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  </svg>Cart: 0
+                </div>
+              </div>
+              </div>
+            <div class="mr-2 flex items-center md:hidden">
+              <button type="button" class="inline-flex items-center justify-center p-1 rounded-md text-sky-900 hover:text-slate-300 hover:bg-sky-900 dark:text-slate-300 dark:hover:text-sky-900 dark:hover:bg-slate-300 transition duration-150 ease-in-out toggle-button" aria-label="Main menu" aria-expanded="false" onclick="toggleSidebar()">
+                <svg id="sidebarO" class="block h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="sidebarX" class="hidden h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+  </header>
+
+
+
+  <!--/** Wine Summary **/-->
+  <div class="container mx-auto my-14 px-6" style="padding-top: 3rem;">
+        <h3 class="inline-block text-2xl font-bold mb-6 dark:text-slate-300">Choose your bottle</h3>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+          <div class="max-w bg-white dark:bg-slate-600 shadow-md rounded-lg overflow-hidden">
+            <a href="shop/detail.html">
+            <div class="w-full">
+              <img src="assets/images/products/01.webp" alt="Product" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="p-4 m-0">
+              <h1 class="text-gray-900 dark:text-slate-300 font-medium text-3xl sm:text-xl md:text-2xl lg:text-xl">Wine Name</h1>
+              <p class="mt-4 text-gray-700 dark:text-white text-3xl md:text-2xl">ZMW 290.<small class="text-gray-500 dark:text-gray-300">00</small></p>
+            </div>              </a>
+            <div class="p-4">
+              <div class="justify-items-end items-end w-full">
+                <button class="bg-slate-600 dark:bg-slate-700 hover:bg-slate-500 dark:hover:bg-slate-500 text-white p-4 rounded w-full font-normal justify-center text-xl flex gap-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth=2 stroke="currentColor" class="w-8 h-8">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  </svg>
+                  Add bottle to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+            <div class="max-w bg-white dark:bg-slate-600 shadow-md rounded-lg overflow-hidden">
+              <a href="/shop/detail/">
+              <div class="w-full">
+                <img src="/src/assets/images/products/01.webp" alt="Product" class="max-w-full max-h-full object-contain">
+              </div>
+              <div class="p-4 m-0">
+                <h1 class="text-gray-900 dark:text-slate-300 font-medium text-3xl sm:text-xl md:text-2xl lg:text-xl">Wine Name</h1>
+                <p class="mt-4 text-gray-700 dark:text-white text-3xl md:text-2xl">ZMW 290.<small class="text-gray-500 dark:text-gray-300">00</small></p>
+              </div>              </a>
+              <div class="p-4">
+                <div class="justify-items-end items-end w-full">
+                  <button class="bg-slate-600 dark:bg-slate-700 hover:bg-slate-500 dark:hover:bg-slate-500 text-white p-4 rounded w-full font-normal justify-center text-xl flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth=2 stroke="currentColor" class="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                    Add bottle to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="max-w bg-white dark:bg-slate-600 shadow-md rounded-lg overflow-hidden">
+              <a href="/shop/detail/">
+              <div class="w-full">
+                <img src="/src/assets/images/products/01.webp" alt="Product" class="max-w-full max-h-full object-contain">
+              </div>
+              <div class="p-4 m-0">
+                <h1 class="text-gray-900 dark:text-slate-300 font-medium text-3xl sm:text-xl md:text-2xl lg:text-xl">Wine Name</h1>
+                <p class="mt-4 text-gray-700 dark:text-white text-3xl md:text-2xl">ZMW 290.<small class="text-gray-500 dark:text-gray-300">00</small></p>
+              </div>              </a>
+              <div class="p-4">
+                <div class="justify-items-end items-end w-full">
+                  <button class="bg-slate-600 dark:bg-slate-700 hover:bg-slate-500 dark:hover:bg-slate-500 text-white p-4 rounded w-full font-normal justify-center text-xl flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                    Add bottle to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="max-w bg-white lg:hidden xl:block dark:bg-slate-600 shadow-md rounded-lg overflow-hidden">
+              <a href="/shop/detail/">
+              <div class="w-full">
+                <img src="/src/assets/images/products/01.webp" alt="Product" class="max-w-full max-h-full object-contain">
+              </div>
+              <div class="p-4 m-0">
+                <h1 class="text-gray-900 dark:text-slate-300 font-medium text-3xl sm:text-xl md:text-2xl lg:text-xl">Wine Name</h1>
+                <p class="mt-4 text-gray-700 dark:text-white text-3xl md:text-2xl">ZMW 290.<small class="text-gray-500 dark:text-gray-300">00</small></p>
+              </div>              </a>
+              <div class="p-4">
+                <div class="justify-items-end items-end w-full">
+                  <button class="bg-slate-600 dark:bg-slate-700 hover:bg-slate-500 dark:hover:bg-slate-500 text-white p-4 rounded w-full font-normal justify-center text-xl flex gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                    Add bottle to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-white justify-center z-10" style="background-color: #0a4275">
+        <div class="py-16 w-full">
+            <div class="text-center flex gap-x-4 items-center justify-center w-full text-lg">
+              <p>Send us a message</p>
+              <span>
+                <a href="sms://+290977397651"
+                  class="inline-block rounded-full border-2 border-neutral-50 px-6 pt-2 pb-[6px] text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-200 hover:bg-opacity-60 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  Send SMS!
+                </a>
+                <a href="sms://+290977397651"
+                  class="inline-block rounded-full border-2 border-neutral-50 px-6 pt-2 pb-[6px] text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-200 hover:bg-opacity-60 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  Send SMS!
+                </a>
+              </span>
+            </div>
+        </div>
+
+        <div
+          class="p-6 text-center text-sm"
+          style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2023 Copyright:
+          <a class="text-orange-500" href="https://simmons.studio">Simmons Multimedia</a>
+        </div>
+  </footer>
+
+</div>
+</body>
+<script type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/cookieDarkMode.js"></script>
+<script type="text/javascript" src="js/darkMode.js"></script>
+</html>
