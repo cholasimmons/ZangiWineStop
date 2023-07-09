@@ -1,19 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'media',
+  darkMode: 'class',
   content: [
     "./src/**/*.{html,js}"
   ],
   theme: {
-    backgroundColor: 'bg-emerald-800',
     extend: {
-      borderRadius: {
-        '4xl': '2rem',
+      backgroundImage: {
+        'hero-pattern': "url('dist/assets/images/wine-bg2.webp')"
       }
-    },
+    }
   },
-  plugins: [
-
-  ],
+  plugins: []
 }
 
