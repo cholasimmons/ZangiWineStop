@@ -3,11 +3,19 @@
 
 #
 
-## `0.8.0` - 2023-07-03
+## `0.8.0` - 2023-07-15
 
 ### Added
 
-- [Preline UI](https://preline.co) `v1.9.0` for UI components
+- [Splide](https://splidejs.com/) `v4.1.3` for Slider/Carousel
+
+- Included 5-star rating system
+
+### Changed
+
+- Color theme to Stone (Light) & Dark Yellow (Dark)
+
+- "Most Popular" selection of wines now an autoplay'd card slider
 
 #
 

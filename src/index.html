@@ -6,8 +6,55 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <base href="/dist/">
-  <link href="css/splide-skyblue.min.css" rel="stylesheet">
+  <link href="css/splide-sea-green.min.css" rel="stylesheet">
   <link href="css/output.css" rel="stylesheet">
+
+  <script src="js/splide.min.js"></script>
+  <script>
+    const options = {
+      autoplay: true,
+      type: 'fade',
+      heightRatio: 1,
+      arrows: {},
+      pagination: false,
+      arrows: false,
+      speed: 2000,
+      easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+      lazyLoad: 'nearby'
+    }
+    const settings = {
+      autoplay: true,
+      type: 'loop',
+      pagination: false,
+      arrows: true,
+      focus: 'center',
+      speed: 1200,
+      easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+      lazyLoad: 'nearby',
+      snap: true,
+      interval: 3000,
+      perPage: 4,
+      gap: '1rem',
+      breakpoints: {
+        960: {
+          perPage: 3,
+          gap    : '1rem',
+        },
+        640: {
+          perPage: 2,
+          gap    : '.7rem',
+        },
+        480: {
+          perPage: 1,
+          gap    : '.5rem',
+        },
+      },
+    }
+    document.addEventListener( 'DOMContentLoaded', function () {
+      new Splide( '#image-carousel', options ).mount();
+      new Splide( '#image-slider', settings ).mount();
+    } );
+  </script>
   
 
   <!-- Preload -->
@@ -35,7 +82,7 @@
   </aside>
 
   <!-- Header -->
-  <header class="sticky w-full bg-stone-300 dark:bg-stone-800 top-0 border-b-2 border-b-stone-500 z-50">
+  <header class="sticky w-full bg-stone-200 dark:bg-stone-800 top-0 border-b-2 border-b-stone-600 z-30">
         <nav class="max-w-6xl mx-auto px-4 py-2  md:px-6 lg:px-8">
           <div class="flex justify-between">
             <div class="flex-shrink-0 flex items-center">
@@ -51,7 +98,7 @@
                 <!--svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                 </svg-->
-                <svg id="moon-icon" class="hs-dark-mode-active:block w-10 h-10 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+                <svg id="moon-icon" class="hs-dark-mode-active:block w-8 h-8 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
                   <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
                   <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke:#f2f2f2;stroke-width:4px"/>
                   <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
@@ -98,31 +145,33 @@
   </header>
 
   <!--/** Hero Carousel **/-->
-  <section class="w-full h-96 overflow-hidden">
-    <div class="hero-carousel h-full max-w-6xl mx-auto relative">
-          <div class="hero-carousel-item w-full h-full transition-opacity duration-500 opacity-0 z-20">
-            <img src="/dist/assets/images/carousel/00.webp" alt="Slide 1" class="w-full h-full object-cover">
-            <!--div class="hero-carousel-caption absolute bottom-0 text-white text-center w-full p-6">
-              <h2 class="text-2xl font-bold mb-2">Slide 1</h2>
-              <p class="text-lg">This is a description of slide 1</p>
-            </div-->
-          </div>
+  <section class="w-full h-44 sm:h-72 md:h-96">
+    <div class="h-full max-w-6xl mx-auto overflow-hidden">
+      <section id="image-carousel" class="splide h-full w-full p-0" aria-label="Beautiful Slides">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="/dist/assets/images/carousel/00.webp" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="/dist/assets/images/carousel/01.webp" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="/dist/assets/images/carousel/02.webp" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="/dist/assets/images/carousel/03.webp" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="/dist/assets/images/carousel/04.webp" alt="">
+            </li>
+          </ul>
+        </div>
 
-          <div class="hero-carousel-item w-full h-full transition-opacity duration-500 opacity-0 z-20">
-            <img src="/dist/assets/images/carousel/01.webp" alt="Slide 2" class="w-full h-full object-cover" >
-            <!--div class="hero-carousel-caption absolute bottom-0 text-white text-center w-full p-6">
-              <h2 class="text-2xl font-bold mb-2">Slide 2</h2>
-              <p class="text-lg">This is a description of slide 2</p>
-            </div-->
-          </div>
-
-          <div class="hero-carousel-item w-full h-full inset-0 transition-opacity duration-500 opacity-100">
-            <img class="w-full h-full object-cover" src="assets/images/carousel/03.webp" alt="Slide 3">
-            <!--div class="hero-carousel-caption absolute bottom-0 text-white text-center w-full p-6">
-              <h2 class="text-2xl font-bold mb-2">Slide 3</h2>
-              <p class="text-lg">This is a description of slide 3</p>
-            </div-->
-          </div>
+        <div class="my-carousel-progress">
+          <div class="my-carousel-progress-bar"></div>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -131,104 +180,161 @@
   <section class=" text-center py-16 flex flex-col justify-items-center dark:bg-stone-700 bg-stone-200">
     <div class="max-w-6xl mx-auto px-6 text-amber-950 dark:text-stone-300">
       <h1 class="text-2xl md:text-4xl font-bold mb-4 ">Welcome to Zangi Wine Stop</h1>
-      <p class="mb-4 text-lg ">We offer a wide variety of wines from all over the world. Browse our products and find your favorite.</p>
-      <a href="shop/detail.html" class="btnn">Browse our Products</a>
+      <p class="mb-4 md:text-lg ">We offer a wide variety of wines from all over the world. Browse our products and find your favorite.</p>
+      <a href="shop/detail.html" class="btnn sm:w-fit">Browse our Products</a>
     </div>
   </section>
 
   <!--/** Wine Summary **/-->
   <div class="max-w-6xl mx-auto my-10 px-6">
-        <h3 class="inline-block text-xl font-medium mb-4 mx-auto text-yellow-950">Most Popular</h3>
+        <h3 class="w-full inline-block text-xl font-medium mb-4 mx-auto text-yellow-950 md:text-center">Most Popular</h3>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!--/** Most Popular Card Slider **/-->
+            <section id="image-slider" class="splide h-full w-full p-0" aria-label="Beautiful Slides">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
+                      <a href="detail.html">
+                        <div class="w-full">
+                          <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4 m-0">
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <div class="mt-2 flex justify-between items-center">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
+                          </div>
+                        </div>
+                      </a>
+          
+                      <div class="p-4 pt-0">
+                          <button class="btnn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                            <span class="hidden md:block">Add to Cart</span>
+                            <span class="block md:hidden">Add</span>
+                          </button>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="splide__slide">
+                    <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
+                      <a href="detail.html">
+                        <div class="w-full">
+                          <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4 m-0">
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <div class="mt-2 flex justify-between items-center">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
+                          </div>
+                        </div>
+                      </a>
+          
+                      <div class="p-4 pt-0">
+                          <button class="btnn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                            <span class="hidden md:block">Add to Cart</span>
+                            <span class="block md:hidden">Add</span>
+                          </button>
+                      </div>
+                    </div>
+                  </li>
 
-          <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-lg overflow-hidden flex flex-col justify-between border-2 dark:border-emerald-950">
-            <a href="detail.html">
-              <div class="w-full">
-                <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                  <li class="splide__slide">
+                    <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
+                      <a href="detail.html">
+                        <div class="w-full">
+                          <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4 m-0">
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <div class="mt-2 flex justify-between items-center">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
+                          </div>
+                        </div>
+                      </a>
+          
+                      <div class="p-4 pt-0">
+                          <button class="btnn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                            <span class="hidden md:block">Add to Cart</span>
+                            <span class="block md:hidden">Add</span>
+                          </button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="splide__slide">
+                    <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
+                      <a href="detail.html">
+                        <div class="w-full">
+                          <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4 m-0">
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <div class="mt-2 flex justify-between items-center">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
+                          </div>
+                        </div>
+                      </a>
+          
+                      <div class="p-4 pt-0">
+                          <button class="btnn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                            <span class="hidden md:block">Add to Cart</span>
+                            <span class="block md:hidden">Add</span>
+                          </button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="splide__slide">
+                    <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
+                      <a href="detail.html">
+                        <div class="w-full">
+                          <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4 m-0">
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <div class="mt-2 flex justify-between items-center">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
+                          </div>
+                        </div>
+                      </a>
+          
+                      <div class="p-4 pt-0">
+                          <button class="btnn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                            <span class="hidden md:block">Add to Cart</span>
+                            <span class="block md:hidden">Add</span>
+                          </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="p-4 m-0">
-                <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
-                <p class="mt-2 font-medium text-yellow-950 dark:text-stone-100 "><small class="smallCurrency">K</small> 290.<small class="smallCurrency">00</small></p>
-              </div>
-            </a>
 
-            <div class="p-4 pt-0">
-                <button class="btnn w-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  </svg>
-                  <span class="hidden md:block">Add to Cart</span>
-                  <span class="block md:hidden">Add</span>
-                </button>
-            </div>
-          </div>
-
-          <div class="max-w bg-white dark:bg-emerald-950 hover:shadow-lg rounded-lg overflow-hidden flex flex-col justify-between border-2 dark:border-emerald-950">
-            <a href="detail.html">
-              <div class="w-full">
-                <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
+              <div class="my-carousel-progress">
+                <div class="my-carousel-progress-bar"></div>
               </div>
-              <div class="p-4 m-0">
-                <h1 class="text-emerald-900 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
-                <p class="mt-2 font-medium text-emerald-700 dark:text-white"><small class="smallCurrency">K</small> 290.<small class="smallCurrency">00</small></p>
-              </div>
-            </a>
-            <div class="p-4 pt-0">
-                <button class="btnn w-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  </svg>
-                  <span class="hidden md:block">Add to Cart</span>
-                  <span class="block md:hidden">Add</span>
-                </button>
-            </div>
-          </div>
+            </section>
 
-          <div class="max-w bg-white dark:bg-emerald-950 hover:shadow-lg rounded-lg overflow-hidden flex flex-col justify-between border-2 dark:border-emerald-950">
-            <a href="detail.html">
-              <div class="w-full">
-                <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
-              </div>
-              <div class="p-4 m-0">
-                <h1 class="text-emerald-900 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
-                <p class="mt-2 font-medium text-emerald-700 dark:text-white"><small class="smallCurrency">K</small> 290.<small class="smallCurrency">00</small></p>
-              </div>
-            </a>
-            <div class="p-4 pt-0">
-                <button class="btnn w-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  </svg>
-                  <span class="hidden md:block">Add to Cart</span>
-                  <span class="block md:hidden">Add</span>
-                </button>
-            </div>
-          </div>
-
-          <div class="max-w bg-white dark:bg-emerald-950 hover:shadow-lg rounded-lg overflow-hidden flex flex-col justify-between border-2 dark:border-emerald-950">
-            <a href="/shop/detail.html">
-                <div class="w-full">
-                  <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="p-4 m-0">
-                  <h1 class="text-gray-900 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
-                  <p class="mt-2 text-gray-700 dark:text-white "><small class="smallCurrency">K </small> 290.<small class="smallCurrency">00</small></p>
-                </div>
-              </a>
-              <div class="p-4 pt-0">
-                  <button class="btnn w-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                    </svg>
-                    <span class="hidden md:block">Add to Cart</span>
-                    <span class="block md:hidden">Add</span>
-                  </button>
-              </div>
-            </div>
-
-
-        </div>
   </div>
 
 
@@ -236,8 +342,8 @@
   <footer class="text-center text-yellow-950 dark:text-stone-300 justify-center ">
         <div class="py-12 w-full bg-stone-300 z-10 dark:bg-stone-700">
             <div class="text-center flex flex-col gap-y-4 items-center justify-center w-full text-2xl">
-              <span>Have a query?</span>
-              <button type="button"
+              <span>Have a Question?</span>
+              <button type="button" onclick="demoBtn()"
                 class="inline-block rounded-full border-2 border-yellow-950 dark:border-neutral-50 px-8 py-2 text-sm font-semibold uppercase text-yellow-950 dark:text-stone-300 hover:border-stone-300 hover:bg-yellow-950 hover:text-stone-300 dark:bg-yellow-950 dark:hover:bg-stone-300 dark:hover:text-yellow-950 transition duration-150 ease-in-out"
                 data-te-ripple-init data-te-ripple-color="light">
                 Call Us Now
@@ -248,15 +354,15 @@
         <div class="p-6 text-center text-sm flex justify-center text-stone-300 dark:text-stone-500 bg-stone-500 dark:bg-stone-900">
           <!--span>&copy; 2023 Copyright</span-->
           <span>
-            <a class="hover:text-amber-400" href="https://simmons.studio">Simmons Multimedia Studio</a>&nbsp;|&nbsp;<span id="copyright">Powered by <a class="hover:text-orange-500" href="https://www.couchcms.com/" title="CouchCMS - Simple Open-Source Content Management">CouchCMS</a></span>
+            <a class="hover:text-amber-500" href="https://simmons.studio">Simmons Multimedia Studio</a>&nbsp;|&nbsp;<span id="copyright">Powered by <a class="hover:text-amber-500" href="https://www.couchcms.com/" title="CouchCMS - Simple Open-Source Content Management">CouchCMS</a></span>
           </span>
         </div>
   </footer>
-<script type="text/javascript" src="js/main.js"></script>
-<script src="js/splide.min.js"></script>
+<script type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/darkMode.js"></script>
+<script lang="ts" type="text/typescript" src="js/config.ts"></script>
 </body>
 
 <!--script type="text/javascript" src="js/cookieDarkMode.js"></script>
-<script type="text/javascript" src="js/sidebar.js"></script>
-<script type="text/javascript" src="js/darkMode.js"></script-->
+<script type="text/javascript" src="js/sidebar.js"></script-->
 </html>
