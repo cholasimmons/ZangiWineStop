@@ -5,6 +5,7 @@ lightIcon = document.getElementById("sun-icon");
 darkIcon = document.getElementById("moon-icon");
 logo = document.getElementById("zangi-logo-1");
 src = logo.getAttribute("src");
+
 body = ("dark" === localStorage.theme || !("theme"in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? 
 
 (this.body.classList.add("dark"),
