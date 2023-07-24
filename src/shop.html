@@ -8,10 +8,6 @@
   <base href="/dist/">
   <link href="css/output.css" rel="stylesheet">
 
-  <!-- Preload -->
-  <link rel="preload" href="assets/images/logo4.webp" as="image">
-  <link rel="preload" href="assets/images/logo4-dark.webp" as="image">
-
 </head>
 
 <body>
@@ -35,73 +31,72 @@
 
   <!-- Header -->
   <header class="sticky w-full bg-stone-200 dark:bg-stone-800 top-0 border-b-2 border-b-stone-600 z-30">
-        <nav class="max-w-6xl mx-auto px-4 py-2  md:px-6 lg:px-8">
-          <div class="flex justify-between">
-            <div class="flex-shrink-0 flex items-center">
-              <a href="#">
-                <img id="zangi-logo-1" class="zangi-logo h-9 w-auto " src="assets/images/logo4.webp" alt="Zangi">
-              </a>
-            </div>
+    <nav class="max-w-6xl mx-auto px-4 py-2  md:px-6 lg:px-8">
+      <div class="flex justify-between">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#">
+            <img id="zangi-logo-1" class="zangi-logo h-9 w-auto " src="assets/images/logo4.webp" data-src="assets/images/logo4-dark.webp" alt="Zangi" preload>
+          </a>
+        </div>
 
+        <div class="flex flex-shrink-0 dark:text-stone-300 text-yellow-950">
+          <button id="dark-mode-toggle" title="Dark Mode"
+          class="ml-3 inline-flex items-center justify-center p-1 rounded-md  transition duration-150 ease-in-out toggle-button">
+            <!--svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg-->
+            <svg id="moon-icon" class="hs-dark-mode-active:hidden w-8 h-8 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+              <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
+              <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke:#f2f2f2;stroke-width:4px"/>
+              <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
+              <path d="M78.654 37.576v-8.067h16.308v8.067" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
+              <g><path d="M71.369 45.28h4.107M78.286 45.28h4.107M85.203 45.28h4.107M92.12 45.28h4.107M99.037 45.28h4.108M71.369 66.452h31.776M71.369 74.071h31.776M71.369 81.655h31.776M71.369 89.24h31.776M71.369 96.824h31.776M71.369 104.408h31.776M71.369 111.992h31.776M71.369 119.576h31.776" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/></g>
+              <g><path d="M60.713 43.517a14.09 14.09 0 0 1-10.481 4.66c-7.796 0-11.305-4.459-12.845-7.036 12.311 0 18.408-11.308 12.845-21.214 6.541 0 12.05 4.456 13.653 10.496h-1.016a4.93 4.93 0 0 0-4.466 7.021l2.31 4.937v1.136zM19.457 6.411l3.032 8.192 8.192 3.031-8.192 3.031-3.032 8.192-3.031-8.192-8.192-3.031 8.192-3.031 3.031-8.192zM29.322 56.886l2.297 6.207 6.207 2.297-6.207 2.297-2.297 6.207-2.297-6.207-6.207-2.297 6.207-2.297 2.297-6.207zM103.966 6.411l2.297 6.207 6.207 2.297-6.207 2.296-2.297 6.208-2.297-6.208-6.207-2.296 6.207-2.297 2.297-6.207z" style="fill:#f2f2f2"/></g>
+            </svg>
+            <svg id="sun-icon" class="hs-dark-mode-active:hidden w-8 h-8 stroke-yellow-950 border-0 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+              <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
+              <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke-width:4px"/>
+              <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke-width:4px;stroke-linecap:butt"/>
+              <path d="M78.654 37.576v-8.067h16.308v8.067" style="fill:none;stroke-width:4px;stroke-linecap:butt"/>
+              <g><path d="M71.369 45.28h4.107M78.286 45.28h4.107M85.203 45.28h4.107M92.12 45.28h4.107M99.037 45.28h4.108M71.369 66.452h31.776M71.369 74.071h31.776M71.369 81.655h31.776M71.369 89.24h31.776M71.369 96.824h31.776M71.369 104.408h31.776M71.369 111.992h31.776M71.369 119.576h31.776" style="fill:none;stroke-width:4px;stroke-linecap:butt"/></g>
+              <g><path d="M49.736 46.531c-6.887 0-12.479-5.591-12.479-12.479 0-6.888 5.592-12.479 12.479-12.479 6.888 0 9.987 3.94 11.348 6.216" style="fill:none;stroke-width:3.76px"/>
+              <path d="M49.736 2.898v10.111M65.313 7.072l-5.055 8.756M76.717 18.475 67.96 23.53M49.736 65.206V55.095M34.159 61.032l5.056-8.756M22.756 49.629l8.756-5.055M18.852 34.052h10.111M22.99 18.61l8.756 5.056M34.294 7.306l5.056 8.756" style="fill:none;stroke-width:4.14px"/></g>
+            </svg>
+            <!--svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg-->
+          </button>
+          <div class="hidden md:ml-6 md:flex md:items-center">
+            <a href="index.html" class="px-4 py-2 rounded-md text-lg font-medium  hover:text-stone-500 focus:text-stone-400 transition duration-150 ease-in-out">Home</a>
+            <a href="shop.html" class="px-4 py-2 mr-3 rounded-md text-lg font-medium  hover:text-gray-500 focus:text-gray-500 transition duration-150 ease-in-out">Shop</a>
 
-            <div class="flex flex-shrink-0 dark:text-stone-300 text-yellow-950">
-              <button id="dark-mode-toggle" title="Dark Mode"
-              class="ml-3 inline-flex items-center justify-center p-1 rounded-md  transition duration-150 ease-in-out toggle-button">
-                <!--svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                </svg-->
-                <svg id="moon-icon" class="hs-dark-mode-active:block w-8 h-8 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
-                  <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
-                  <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke:#f2f2f2;stroke-width:4px"/>
-                  <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
-                  <path d="M78.654 37.576v-8.067h16.308v8.067" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
-                  <g><path d="M71.369 45.28h4.107M78.286 45.28h4.107M85.203 45.28h4.107M92.12 45.28h4.107M99.037 45.28h4.108M71.369 66.452h31.776M71.369 74.071h31.776M71.369 81.655h31.776M71.369 89.24h31.776M71.369 96.824h31.776M71.369 104.408h31.776M71.369 111.992h31.776M71.369 119.576h31.776" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/></g>
-                  <g><path d="M60.713 43.517a14.09 14.09 0 0 1-10.481 4.66c-7.796 0-11.305-4.459-12.845-7.036 12.311 0 18.408-11.308 12.845-21.214 6.541 0 12.05 4.456 13.653 10.496h-1.016a4.93 4.93 0 0 0-4.466 7.021l2.31 4.937v1.136zM19.457 6.411l3.032 8.192 8.192 3.031-8.192 3.031-3.032 8.192-3.031-8.192-8.192-3.031 8.192-3.031 3.031-8.192zM29.322 56.886l2.297 6.207 6.207 2.297-6.207 2.297-2.297 6.207-2.297-6.207-6.207-2.297 6.207-2.297 2.297-6.207zM103.966 6.411l2.297 6.207 6.207 2.297-6.207 2.296-2.297 6.208-2.297-6.208-6.207-2.296 6.207-2.297 2.297-6.207z" style="fill:#f2f2f2"/></g>
-                </svg>
-                <svg id="sun-icon" class="hs-dark-mode-active:hidden w-8 h-8 stroke-yellow-950 border-0 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
-                  <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
-                  <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke-width:4px"/>
-                  <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke-width:4px;stroke-linecap:butt"/>
-                  <path d="M78.654 37.576v-8.067h16.308v8.067" style="fill:none;stroke-width:4px;stroke-linecap:butt"/>
-                  <g><path d="M71.369 45.28h4.107M78.286 45.28h4.107M85.203 45.28h4.107M92.12 45.28h4.107M99.037 45.28h4.108M71.369 66.452h31.776M71.369 74.071h31.776M71.369 81.655h31.776M71.369 89.24h31.776M71.369 96.824h31.776M71.369 104.408h31.776M71.369 111.992h31.776M71.369 119.576h31.776" style="fill:none;stroke-width:4px;stroke-linecap:butt"/></g>
-                  <g><path d="M49.736 46.531c-6.887 0-12.479-5.591-12.479-12.479 0-6.888 5.592-12.479 12.479-12.479 6.888 0 9.987 3.94 11.348 6.216" style="fill:none;stroke-width:3.76px"/>
-                  <path d="M49.736 2.898v10.111M65.313 7.072l-5.055 8.756M76.717 18.475 67.96 23.53M49.736 65.206V55.095M34.159 61.032l5.056-8.756M22.756 49.629l8.756-5.055M18.852 34.052h10.111M22.99 18.61l8.756 5.056M34.294 7.306l5.056 8.756" style="fill:none;stroke-width:4.14px"/></g>
-                </svg>
-                <!--svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                </svg-->
-              </button>
-              <div class="hidden md:ml-6 md:flex md:items-center">
-                <a href="index.html" class="px-4 py-2 rounded-md text-lg font-medium  hover:text-stone-500 focus:text-stone-400 transition duration-150 ease-in-out">Home</a>
-                <a href="shop.html" class="px-4 py-2 mr-3 rounded-md text-lg font-medium  hover:text-gray-500 focus:text-gray-500 transition duration-150 ease-in-out">Shop</a>
-
-                <div class="flex border-l-2 -mr-2 border-stone-600 px-6 py-2 font-medium text-lg  hover:bg-yellow-950 hover:text-stone-300 dark:hover:bg-stone-300 dark:hover:text-yellow-950 cursor-pointer align-middle">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  </svg>Cart: 0
-                </div>
-              </div>
-            </div>
-            <div class="mr-2 flex items-center md:hidden">
-              <button type="button" class="inline-flex items-center justify-center p-1 rounded-md text-yellow-950 hover:text-stone-300 hover:bg-yellow-950 dark:text-stone-300 dark:hover:text-yellow-950 dark:hover:bg-stone-300 transition duration-150 ease-in-out toggle-button" aria-label="Main menu" aria-expanded="false" onclick="toggleSidebar()">
-                <svg id="sidebarO" class="block h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-                <svg id="sidebarX" class="hidden h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
+            <div class="hidden border-l-2 -mr-2 border-stone-600 px-6 py-2 font-medium text-lg  hover:bg-yellow-950 hover:text-stone-300 dark:hover:bg-stone-300 dark:hover:text-yellow-950 cursor-pointer align-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+              </svg>Cart: 0
             </div>
           </div>
-        </nav>
-  </header>
+        </div>
+        <div class="mr-2 flex items-center md:hidden">
+          <button type="button" class="inline-flex items-center justify-center p-1 rounded-md text-yellow-950 hover:text-stone-300 hover:bg-yellow-950 dark:text-stone-300 dark:hover:text-yellow-950 dark:hover:bg-stone-300 transition duration-150 ease-in-out toggle-button" aria-label="Main menu" aria-expanded="false" onclick="toggleSidebar()">
+            <svg id="sidebarO" class="block h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="sidebarX" class="hidden h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+</header>
 
 
   <!--/** Wine Summary **/-->
   <div class="max-w-6xl mx-auto my-10 px-6">
     <h3 class="w-full inline-block text-xl font-medium mb-4 mx-auto text-yellow-950 md:text-center">Choose a Bottle</h3>
 
-    <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
           <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
             <a href="detail.html">
@@ -109,7 +104,32 @@
                 <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
               </div>
               <div class="p-4 m-0">
-                <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
+                <div class="mt-2 flex justify-between items-center">
+                  <div>⭐⭐⭐⭐⭐</div>
+                  <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
+                </div>
+              </div>
+            </a>
+
+            <div class="p-4 pt-0">
+                <button class="btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  </svg>
+                  <span class="hidden md:block">Add to Cart</span>
+                  <span class="block md:hidden">Add</span>
+                </button>
+            </div>
+          </div>
+
+          <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
+            <a href="detail.html">
+              <div class="w-full">
+                <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+              </div>
+              <div class="p-4 m-0">
+                <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
                 <div class="mt-2 flex justify-between items-center">
                   <div>⭐⭐⭐⭐⭐</div>
                   <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
@@ -228,33 +248,14 @@
             </div>
           </div>
 
-          <div class="max-w bg-stone-100 dark:bg-yellow-950 hover:shadow-lg rounded-md overflow-hidden flex flex-col justify-between ">
-            <a href="detail.html">
-              <div class="w-full">
-                <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-              </div>
-              <div class="p-4 m-0">
-                <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
-                <div class="mt-2 flex justify-between items-center">
-                  <div>⭐⭐⭐⭐⭐</div>
-                  <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
-                </div>
-              </div>
-            </a>
-
-            <div class="p-4 pt-0">
-                <button class="btnn">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" class="w-6 h-6 block sm:hidden">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  </svg>
-                  <span class="hidden md:block">Add to Cart</span>
-                  <span class="block md:hidden">Add</span>
-                </button>
-            </div>
-          </div>
-
-
+          
     </section>
+    <ul class="w-full mt-8 flex justify-center pagination gap-x-2">
+      <a href=""><li class="btn px-4 py-2 hover:bg-stone-300 rounded-lg">1</li></a>
+      <a href=""><li class="btn px-4 p-2 hover:bg-stone-300 rounded-lg">2</li></a>
+      <a href=""><li class="btn px-4 p-2 hover:bg-stone-300 rounded-lg">3</li></a>
+      <a href=""><li class="btn px-4 p-2 hover:bg-stone-300 rounded-lg">4</li></a>
+    </ul>
   </div>
 
 
@@ -264,9 +265,8 @@
         <div class="text-center flex flex-col gap-y-4 items-center justify-center w-full text-2xl">
           <span>Have a Question?</span>
           <button type="button" onclick="demoBtn()"
-            class="inline-block rounded-full border-2 border-yellow-950 dark:border-neutral-50 px-8 py-2 text-sm font-semibold uppercase text-yellow-950 dark:text-stone-300 hover:border-stone-300 hover:bg-yellow-950 hover:text-stone-300 dark:bg-yellow-950 dark:hover:bg-stone-300 dark:hover:text-yellow-950 transition duration-150 ease-in-out"
-            data-te-ripple-init data-te-ripple-color="light">
-            Call Us Now
+            class=" rounded-full border-2 border-yellow-950 px-10 py-2 text-base font-semibold uppercase text-stone-300 dark:text-yellow-950  hover:bg-yellow-950 hover:text-stone-300 bg-yellow-950 dark:bg-stone-300 dark:hover:bg-yellow-950 dark:hover:text-stone-300 transition duration-150 ease-in-out">
+            Call Us
           </button>
         </div>
     </div>
@@ -277,9 +277,8 @@
         <a class="hover:text-amber-500" href="https://simmons.studio">Simmons Multimedia Studio</a>&nbsp;|&nbsp;<span id="copyright">Powered by <a class="hover:text-amber-500" href="https://www.couchcms.com/" title="CouchCMS - Simple Open-Source Content Management">CouchCMS</a></span>
       </span>
     </div>
-  </footer>
-<script type="text/javascript" src="js/sidebar.js"></script>
-<script lang="ts" type="text/typescript" src="js/config.ts"></script>
+</footer>
+  <script type="text/javascript" src="js/config.js"></script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
   <link href="css/splide-sea-green.min.css" rel="stylesheet">
   <link href="css/output.css" rel="stylesheet">
 
-  <script src="js/splide.min.js"></script>
+
   <script>
     const options = {
       autoplay: true,
@@ -58,8 +58,8 @@
   
 
   <!-- Preload -->
-  <link rel="preload" href="assets/images/logo4.webp" as="image">
-  <link rel="preload" href="assets/images/logo4-dark.webp" as="image">
+  <!--link rel="preload" href="assets/images/logo4.webp" as="image">
+  <link rel="preload" href="assets/images/logo4-dark.webp" as="image"-->
 </head>
 
 <body>
@@ -87,10 +87,9 @@
           <div class="flex justify-between">
             <div class="flex-shrink-0 flex items-center">
               <a href="#">
-                <img id="zangi-logo-1" class="zangi-logo h-9 w-auto " src="assets/images/logo4.webp" alt="Zangi">
+                <img id="zangi-logo-1" class="zangi-logo h-9 w-auto " src="assets/images/logo4.webp" data-src="assets/images/logo4-dark.webp" alt="Zangi" preload>
               </a>
             </div>
-
 
             <div class="flex flex-shrink-0 dark:text-stone-300 text-yellow-950">
               <button id="dark-mode-toggle" title="Dark Mode"
@@ -98,7 +97,7 @@
                 <!--svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                 </svg-->
-                <svg id="moon-icon" class="hs-dark-mode-active:block w-8 h-8 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
+                <svg id="moon-icon" class="hs-dark-mode-active:hidden w-8 h-8 animate-pulse" viewBox="0 0 143 145" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5">
                   <path style="fill-opacity:0" d="M0 0h142.208v142.208H0z"/>
                   <path d="M96.892 134.747v-6.529l11.788-2.249V59.197H65.833v66.772l11.392 2.249v6.529H51.158v7.461h72.198v-7.461H96.892z" style="fill:none;stroke:#f2f2f2;stroke-width:4px"/>
                   <path d="M79.367 59.197v-6.529H65.833V41.833l-2.803-6.539h10.633l2.436 2.924h21.776l2.086-2.924h11.159l-2.44 6.539v10.835H94.924v6.529" style="fill:none;stroke:#f2f2f2;stroke-width:4px;stroke-linecap:butt"/>
@@ -123,7 +122,7 @@
                 <a href="index.html" class="px-4 py-2 rounded-md text-lg font-medium  hover:text-stone-500 focus:text-stone-400 transition duration-150 ease-in-out">Home</a>
                 <a href="shop.html" class="px-4 py-2 mr-3 rounded-md text-lg font-medium  hover:text-gray-500 focus:text-gray-500 transition duration-150 ease-in-out">Shop</a>
 
-                <div class="flex border-l-2 -mr-2 border-stone-600 px-6 py-2 font-medium text-lg  hover:bg-yellow-950 hover:text-stone-300 dark:hover:bg-stone-300 dark:hover:text-yellow-950 cursor-pointer align-middle">
+                <div class="hidden border-l-2 -mr-2 border-stone-600 px-6 py-2 font-medium text-lg  hover:bg-yellow-950 hover:text-stone-300 dark:hover:bg-stone-300 dark:hover:text-yellow-950 cursor-pointer align-middle">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                   </svg>Cart: 0
@@ -147,7 +146,7 @@
   <!--/** Hero Carousel **/-->
   <section class="w-full h-44 sm:h-72 md:h-96">
     <div class="h-full max-w-6xl mx-auto overflow-hidden">
-      <section id="image-carousel" class="splide h-full w-full p-0" aria-label="Beautiful Slides">
+      <section id="slider1" class="splide h-full w-full p-0" role="group" aria-label="Beautiful Slides">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -190,7 +189,7 @@
         <h3 class="w-full inline-block text-xl font-medium mb-4 mx-auto text-yellow-950 md:text-center">Most Popular</h3>
 
         <!--/** Most Popular Card Slider **/-->
-            <section id="image-slider" class="splide h-full w-full p-0" aria-label="Beautiful Slides">
+            <section id="slider2" class="splide h-full w-full p-0" aria-label="Beautiful Slides">
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
@@ -200,7 +199,7 @@
                           <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 m-0">
-                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
                           <div class="mt-2 flex justify-between items-center">
                             <div>⭐⭐⭐⭐⭐</div>
                             <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
@@ -227,7 +226,7 @@
                           <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 m-0">
-                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
                           <div class="mt-2 flex justify-between items-center">
                             <div>⭐⭐⭐⭐⭐</div>
                             <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
@@ -254,7 +253,7 @@
                           <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 m-0">
-                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
                           <div class="mt-2 flex justify-between items-center">
                             <div>⭐⭐⭐⭐⭐</div>
                             <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
@@ -281,7 +280,7 @@
                           <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 m-0">
-                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
                           <div class="mt-2 flex justify-between items-center">
                             <div>⭐⭐⭐⭐⭐</div>
                             <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
@@ -308,7 +307,7 @@
                           <img src="assets/images/products/01.webp" alt="Product" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 m-0">
-                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-2xl sm:text-lg">Wine Name</h1>
+                          <h1 class="text-yellow-950 dark:text-stone-100 font-semibold text-lg md:text-xl">Wine Name</h1>
                           <div class="mt-2 flex justify-between items-center">
                             <div>⭐⭐⭐⭐⭐</div>
                             <div class="smallCurrency"><small>K</small> 290.<small >00</small></div>
@@ -344,7 +343,7 @@
             <div class="text-center flex flex-col gap-y-4 items-center justify-center w-full text-2xl">
               <span>Have a Question?</span>
               <button type="button" onclick="demoBtn()"
-                class=" rounded-full border-2 border-yellow-950 px-10 py-2 text-base font-semibold uppercase text-stone-300 dark:text-yellow-950  hover:bg-yellow-950 hover:text-stone-300 dark:bg-stone-300 dark:hover:bg-yellow-950 dark:hover:text-stone-300 transition duration-150 ease-in-out">
+                class=" rounded-full border-2 border-yellow-950 px-10 py-2 text-base font-semibold uppercase text-stone-300 dark:text-yellow-950  hover:bg-yellow-950 hover:text-stone-300 bg-yellow-950 dark:bg-stone-300 dark:hover:bg-yellow-950 dark:hover:text-stone-300 transition duration-150 ease-in-out">
                 Call Us
               </button>
             </div>
@@ -357,11 +356,43 @@
           </span>
         </div>
   </footer>
-<script type="text/javascript" src="js/sidebar.js"></script>
-<script type="text/javascript" src="js/darkMode.js"></script>
-<script lang="ts" type="text/typescript" src="js/config.ts"></script>
-</body>
+<script type="text/javascript" src="js/splide.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript">
+  const options1 = {
+    pagination: false,
+    arrows: false,
+    perPage: 1,
+    type: 'loop',
+    autoplay: true,
+    speed: 600,
+  }
+  
+  const options2 = {
+    pagination: false,
+    arrows: false,
+    perPage: 5,
+    gap: 8,
+    type: 'loop',
+    breakpoints: {
+    480: {
+			perPage: 1,
+		},
+    720: {
+			perPage: 2,
+		},
+    960: {
+			perPage: 3,
+		},
+    1580: {
+			perPage: 4,
+		},
+  }
+  }
 
-<!--script type="text/javascript" src="js/cookieDarkMode.js"></script>
-<script type="text/javascript" src="js/sidebar.js"></script-->
+  new Splide( '#slider1', options1 ).mount();
+
+  new Splide( '#slider2', options2 ).mount();
+</script>
+</body>
 </html>

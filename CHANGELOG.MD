@@ -3,7 +3,7 @@
 
 #
 
-## `0.8.0` - 2023-07-15
+## `0.8.0` - 2023-07-25
 
 ### Added
 
@@ -11,11 +11,15 @@
 
 - Included 5-star rating system
 
+- Wine Details page
+
 ### Changed
 
 - Color theme to Stone (Light) & Dark Yellow (Dark)
 
 - "Most Popular" selection of wines now an autoplay'd card slider
+
+- Unified javascript for sidebar, theme toggle and button calls
 
 #
 
